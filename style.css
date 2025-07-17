@@ -25,9 +25,9 @@ html{
     height: 600px;
     border-radius: 50px;
     overflow: hidden;
-    -webkit-box-shadow:0px 0px 300px 40px rgb(255, 0, 0);
--moz-box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
-box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
+    -webkit-box-shadow:0px 0px 300px 40px rgb(247, 247, 247);
+-moz-box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
+box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
     }
 
     button {
@@ -48,6 +48,11 @@ box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
     margin: 0%;
     grid-area: title;
     font-size: 35px;
+    }
+
+    #title svg {
+        stroke: white;
+        stroke-width: 1.5px
     }
 
     #open-input {
@@ -71,7 +76,11 @@ box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    }
 
+    #beats svg {
+        stroke: white;
+        stroke-width: 1.5px
     }
     
     #scrub-input {
@@ -89,9 +98,18 @@ box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
     #previous-button {
     grid-area: previous;
     }
+    #previous-button svg {
+        stroke: white;
+        stroke-width: 1px;
+    }
     
     #play-button {
-    grid-area: playpause;
+        grid-area: playpause;
+    }
+    #play-button svg {
+        stroke: rgb(255, 255, 255);
+        stroke-width: 1.5px;
+
     }
 
     #icon-play {
@@ -106,6 +124,10 @@ box-shadow: 0px 0px 300px 40px rgb(255, 0, 0);
     
     #next-button {
     grid-area: next;
+    }
+    #next-button svg {
+        stroke: white;
+        stroke-width: 1px;
     }
     
     

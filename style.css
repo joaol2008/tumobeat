@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -21,9 +21,9 @@ html{
     grid-template-rows: 64px auto 32px auto 32px;
     grid-template-columns: 33% auto 33%;
     background-color: rgb(0, 0, 0);
-    width: 600px;
-    height: 600px;
-    border-radius: 50px;
+    width: 650px;
+    height: 750px;
+    border-radius: 75px;
     overflow: hidden;
     -webkit-box-shadow:0px 0px 300px 40px rgb(247, 247, 247);
 -moz-box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
@@ -45,14 +45,16 @@ box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
     
     #title {
     color: rgb(254, 0, 0);
-    margin: 0%;
+    margin: 5%;
     grid-area: title;
-    font-size: 35px;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 20px
     }
 
     #title svg {
         stroke: white;
-        stroke-width: 1.5px
+        stroke-width: 1.2px
     }
 
     #open-input {
@@ -61,7 +63,15 @@ box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
+        margin-left: 60px;
+        margin-bottom: -5px;
+    }
+
+    #open-input svg {
+        stroke: white;
+        stroke-width: 1.2px;
+
     }
     
 
@@ -80,27 +90,37 @@ box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
 
     #beats svg {
         stroke: white;
-        stroke-width: 1.5px
+        stroke-width: 1.2px
     }
     
     #scrub-input {
         position: relative;
     grid-area: scrub;
     display: flex;
+    margin-left: 16.5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     }
     
     #volume-input {
         grid-area: volume;
         position: relative;
         display: flex;
+        margin-top: -3px;
+        margin-left: 50px;
+        margin-right: 30px;
+        margin-bottom: 15px;
     }
+
+  
     
     #previous-button {
     grid-area: previous;
     }
     #previous-button svg {
         stroke: white;
-        stroke-width: 1px;
+        stroke-width: 0.5px;
     }
     
     #play-button {
@@ -108,7 +128,7 @@ box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
     }
     #play-button svg {
         stroke: rgb(255, 255, 255);
-        stroke-width: 1.5px;
+        stroke-width: 1px;
 
     }
 
@@ -127,26 +147,37 @@ box-shadow: 0px 0px 300px 40px rgb(255, 255, 255);
     }
     #next-button svg {
         stroke: white;
-        stroke-width: 1px;
+        stroke-width: 0.5px;
     }
     
     
     #tumo {
     grid-area: tumo;
+    margin-right: 60px;
+    margin-bottom: -15px;
+    margin-top: -30px;
     }
 
     .range-bar {
-
         position: absolute;
         inset: 0;
-        background-color: rgb(254, 0, 0);
-        opacity: 1;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
         pointer-events: none;
         transform: scaleX(0.5);
         transform-origin: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow:0px 0px 105px 23px rgba(247, 247, 247);
+-moz-box-shadow: 0px 0px 105px 23px rgba(255, 255, 255);
+box-shadow: 0px 0px 105px 23px rgba(255, 255, 255);
+    height: 22px;
+    border-radius: 100px;
+
     }
 
     input[type="range"] {
         flex: 1;
-        opacity: 0.5;
+        opacity: 0;
     }

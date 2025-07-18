@@ -2,9 +2,9 @@ window.onload = async function(){
 
 
     //Carregar o service worker
-    // if ("serviceWorker"){
-    // navigator.serviceWorker.register("service-worker.js")
-    // }
+     if ("serviceWorker"){
+     navigator.serviceWorker.register("service-worker.js")
+    }
     
     
     //Carregar dados da internet (data.json)
@@ -27,8 +27,10 @@ window.onload = async function(){
     let fileinput = document.querySelector("#file-input");
     
     
-    let audio = document.querySelector("Audio")
+    let audio = document.querySelector("audio");
+    audio.src = audioData[0].url;
     let currentMusic = 0;
+    let pauseTime = 0;
     
     //Funções
     
@@ -61,22 +63,25 @@ window.onload = async function(){
     
     }
     playButton.onclick = function(){
-    if (audio.paused){
-    playAudio()
-    } else {
-    pauseAudio()
-    }
+        if (audio.paused){
+            playAudio();
+            audio.currentTime = pauseTime;
+            pauseTime = 0
+        } else {
+            pauseTime = audio.currentTime;
+            pauseAudio();
+        }
     }
     audio.onplay = function(){
     let playIcon = document.querySelector("#icon-play");
     let pauseIcon = document.querySelector("#icon-pause")
     playIcon.style.display = "none";
-    pauseIcon.style.display = "block";
+    pauseIcon.style.display = "initial";
     }
     audio.onpause = function (){
     let playIcon = document.querySelector("#icon-play");
     let pauseIcon = document.querySelector("#icon-pause")
-    playIcon.style.display = "block";
+    playIcon.style.display = "initial";
     pauseIcon.style.display = "none";
     
     }
@@ -86,6 +91,10 @@ window.onload = async function(){
     
     updateInputBar(value, bar);
     
+    }
+
+    audio.onended = function() {
+        nextButton.click();
     }
     
     function scrubAudio(value){
